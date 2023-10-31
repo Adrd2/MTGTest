@@ -19,13 +19,13 @@ import java.util.stream.Collectors;
  * Implementation of {@linkplain Trie} that doesn't perform any memory optimization, but otherwise supports all configurable functionality of a Trie capable of
  * performing fuzzy prefix/key searches.
  */
-final class RedundantTrie<V> implements Trie<V> {
+public final class RedundantTrie<V> implements Trie<V> {
 
   private final Function<V, String> keyMapping;
   private final Function<String, Spliterator<String>> keyPartitioner;
   private final Map<String, Node<String, V>> roots = new HashMap<>();
 
-  RedundantTrie(Function<V, String> keyMapping, Function<String, Spliterator<String>> keyPartitioner) {
+  public RedundantTrie(Function<V, String> keyMapping, Function<String, Spliterator<String>> keyPartitioner) {
     this.keyPartitioner = keyPartitioner;
     this.keyMapping = keyMapping;
   }

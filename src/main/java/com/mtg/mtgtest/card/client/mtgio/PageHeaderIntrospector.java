@@ -10,6 +10,8 @@ import java.util.Optional;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+
+// TODO: 31.10.2023 Следует применить рефакторинг для тестирования, на данный момент класс невозможно безопасно протестировать
 final class PageHeaderIntrospector {
 
     private static final String LINK_RELATIONSHIP_PATTERN = "<([\\w:/\\.\\d\\?=]+)>; rel=\"%s\"";
